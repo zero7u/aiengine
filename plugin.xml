@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.chivox.aiengine"
+    version="0.4">
+    <name>aiengine</name>
+    <description>A cordova plugin of aiengine</description>
+    <license>MIT</license>
+    <keywords>cordova,aiengine,bridge,android,chivox</keywords>
+    <repo>https://github.com/zero7u/aiengine.git</repo>
+    <issue>https://github.com/zero7u/aiengine/issues</issue>
+
+    <js-module src="www/aiengine.js" name="aiengine">
+        <clobbers target="aiengine" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="AIEngine">
+                <param name="android-package" value="com.chivox.AIEngine"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/AIEngine.java" target-dir="src/com/chivox/" />
+    </platform>
+</plugin>
