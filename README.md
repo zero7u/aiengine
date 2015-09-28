@@ -1,4 +1,4 @@
-aiengine-2.0
+aiengine-2.2
 ========
 
 chivox ai engine of speech
